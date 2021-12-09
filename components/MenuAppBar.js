@@ -1,7 +1,6 @@
 import React from 'react';
-import { AppBar, Box, Container, Fab, IconButton, Menu, MenuItem, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Box, Container, Menu, MenuItem, Toolbar, Typography } from '@material-ui/core';
 import InsertEmoticon from '@material-ui/icons/InsertEmoticon';
-import MenuIcon from '@material-ui/icons/Menu';
 
 const pages = [
     { title: 'New Entry', id: 0 },
