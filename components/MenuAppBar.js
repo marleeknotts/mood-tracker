@@ -1,6 +1,5 @@
 import React from 'react';
-import Link from 'next/Link';
-import { AppBar, Box, Container, IconButton, Menu, MenuItem, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Box, Container, Fab, IconButton, Menu, MenuItem, Toolbar, Typography } from '@material-ui/core';
 import InsertEmoticon from '@material-ui/icons/InsertEmoticon';
 import MenuIcon from '@material-ui/icons/Menu';
 
@@ -33,18 +32,8 @@ export default function MenuAppBar(props) {
         <AppBar style={{ height: 100, backgroundColor: 'white' }}>
             <Container maxWidth='none'>
                 <Toolbar style={{ height: 100, width: '100%' }} disableGutters>
-                    <Link href='/'>
-                        <InsertEmoticon style={{ fontSize: 50, color: 'black' }} />
-                    </Link>
+                    <InsertEmoticon style={{ fontSize: 50, color: 'black' }} onClick={handleOpenNavMenu} />
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-                        <IconButton
-                            aria-label='menu'
-                            aria-controls='menu-appbar'
-                            aria-haspopup='true'
-                            onClick={handleOpenNavMenu}
-                        >
-                            <MenuIcon />
-                        </IconButton>
                         <Menu
                             id='menu-appbar'
                             anchorEl={anchorElNav}
